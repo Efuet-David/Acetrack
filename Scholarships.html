@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceTrack - Find Your Dream Scholarship</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/scholshop.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon"> <div class="logo-icon"><i class="fa fa-book"></i></div></div>
+                    <div class="logo-text-container">
+                        <span class="logo-text">AceTrack</span>
+                        <span class="logo-tagline">Your Path to Success</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Scholarships.html">Scholarships</a></li>
+                    <li><a href="/Dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="/appTracker.html">My Applications</a></li>
+                    <li><a href="#">Documents</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="auth-buttons">
+                    <a href="/login.html" class="login-btn">Login</a>
+                    <a href="/signup.html" class="signup-btn">Sign Up</a>
+                </div>
+                <a href="/notifictions.html"><div class="notification-icon">
+                    <span class="notification-badge">3</span>
+                    🔔
+                </div></a>
+                <div class="user-avatar"><i class="fa fa-user"></i></div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Dream Scholarship</h1>
+            <p class="hero-subtitle">Discover fully-funded opportunities for Cameroonian students worldwide</p>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" id="main-search" placeholder="Search scholarships by country, field, or university...">
+                <button class="search-btn" onclick="performSearch()">Search</button>
+            </div>
+
+            <div class="country-filters">
+                <button class="country-tag" onclick="filterByCountry('USA')">🇺🇸 USA</button>
+                <button class="country-tag" onclick="filterByCountry('UK')">🇬🇧 UK</button>
+                <button class="country-tag" onclick="filterByCountry('Canada')">🇨🇦 Canada</button>
+                <button class="country-tag" onclick="filterByCountry('Germany')">🇩🇪 Germany</button>
+                <button class="country-tag active" onclick="filterByCountry('all')">Fully Funded</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <svg class="filter-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                </svg>
+                Filters
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Funding Type</div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="fully-funded" checked>
+                        <label for="fully-funded">Fully Funded</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="partial">
+                        <label for="partial">Partial</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="federal">
+                        <label for="federal">Federal Grant</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-title">Study Level</div>
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <input type="checkbox" id="bachelors">
+                        <label for="bachelors">Bachelor's</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="masters">
+                        <label for="masters">Master's</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="phd">
+                        <label for="phd">PhD</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Scholarships Section -->
+        <section class="scholarships-section">
+            <button class="mobile-filter-toggle" onclick="toggleFilters()">
+                🔍 Show Filters
+            </button>
+
+            <div class="section-header">
+                <h2>All Scholarships</h2>
+                <p class="scholarships-count"><span id="count">8</span> scholarships available</p>
+            </div>
+
+            <div class="scholarships-grid" id="scholarships-grid">
+                <!-- Scholarship cards will be inserted here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeModal()">×</button>
+                <h2 id="modal-title"></h2>
+                <p class="modal-org" id="modal-org"></p>
+                <div class="modal-badges" id="modal-badges"></div>
+            </div>
+            <div class="modal-body">
+                <div class="detail-section">
+                    <h3>Scholarship Overview</h3>
+                    <p id="modal-description"></p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Details</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <span class="detail-label">Country</span>
+                            <span class="detail-value" id="modal-country"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Deadline</span>
+                            <span class="detail-value" id="modal-deadline"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Study Level</span>
+                            <span class="detail-value" id="modal-level"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration</span>
+                            <span class="detail-value" id="modal-duration"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Eligibility Requirements</h3>
+                    <ul class="requirements-list" id="modal-requirements"></ul>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Benefits Included</h3>
+                    <ul class="requirements-list" id="modal-benefits"></ul>
+                </div>
+
+                <button class="apply-btn" onclick="applyNow()">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>
+                    <div class="logo-icon" style="width: 28px; height: 28px; font-size: 0.9rem;">AT</div>
+                    AceTrack
+                </h3>
+                <p>Empowering Cameroonian students to access world-class education through comprehensive scholarship opportunities worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Browse Scholarships</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Application Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AceTrack. All rights reserved. Made with ❤️ for Cameroonian students.</p>
+        </div>
+    </footer>
+<script src="/scholship.js"></script>
+   
+</body>
+</html>

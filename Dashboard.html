@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/Dashboard.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon"> <div class="logo-icon"><i class="fa fa-book"></i></div></div>
+
+                    <div class="logo-text-container">
+                        <span class="logo-text">AceTrack</span>
+                        <span class="logo-tagline">Your Path to Success</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Scholarships.html">Scholarships</a></li>
+                    <li><a href="/Dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="/appTracker.html">My Applications</a></li>
+                    <li><a href="#">Documents</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="auth-buttons">
+                    <a href="/login.html" class="login-btn">Login</a>
+                    <a href="/signup.html" class="signup-btn">Sign Up</a>
+                </div>
+              <a href="/notifictions.html"> <div class="notification-icon">
+                    <span class="notification-badge">3</span>
+                    🔔
+                </div></a> 
+                <div class="user-avatar"><i class="fa fa-user"></i></div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome To AceTrack!</h1>
+            <p class="hero-subtitle">Track your scholarship journey and discover new opportunities</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-content">
+                    <div class="stat-label">Applications Submitted</div>
+                    <div class="stat-value">8</div>
+                </div>
+                <div class="stat-icon blue">📄</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-content">
+                    <div class="stat-label">In Progress</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-icon yellow">⏰</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-content">
+                    <div class="stat-label">Profile Complete</div>
+                    <div class="stat-value">85%</div>
+                </div>
+                <div class="stat-icon green">✓</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-content">
+                    <div class="stat-label">Matched Scholarships</div>
+                    <div class="stat-value">12</div>
+                </div>
+                <div class="stat-icon purple">🎯</div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Recent Applications -->
+            <div class="applications-card">
+                <div class="card-header">
+                    <h2 class="card-title">Recent Applications</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+
+                <div class="application-item">
+                    <div class="application-header">
+                        <div>
+                            <div class="application-title">Chevening Scholarship</div>
+                            <div class="application-org">UK Government</div>
+                        </div>
+                        <span class="status-badge in-progress">In Progress</span>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="deadline-text">Deadline: Mar 15, 2026</div>
+                    </div>
+                </div>
+
+                <div class="application-item">
+                    <div class="application-header">
+                        <div>
+                            <div class="application-title">Fulbright Program</div>
+                            <div class="application-org">US Department of State</div>
+                        </div>
+                        <span class="status-badge submitted">Submitted</span>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-percentage">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <div class="deadline-text">Deadline: Apr 1, 2026</div>
+                    </div>
+                </div>
+
+                <div class="application-item">
+                    <div class="application-header">
+                        <div>
+                            <div class="application-title">DAAD Scholarship</div>
+                            <div class="application-org">German Academic Exchange</div>
+                        </div>
+                        <span class="status-badge in-progress">In Progress</span>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-percentage">45%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%;"></div>
+                        </div>
+                        <div class="deadline-text">Deadline: Mar 30, 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Profile Status Card -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <span class="profile-icon">✓</span>
+                        <h3 class="profile-title">Profile Status</h3>
+                    </div>
+                    <div class="profile-percentage">85% Complete</div>
+                    <div class="profile-progress">
+                        <div class="profile-progress-fill"></div>
+                    </div>
+                    <p class="profile-message">Complete your profile to get better scholarship matches!</p>
+                    <button class="complete-profile-btn">Complete Profile</button>
+                </div>
+
+                <!-- Top Matches Card -->
+                <div class="matches-card">
+                    <div class="matches-header">
+                        <span class="matches-icon">🎯</span>
+                        <h3 class="matches-title">Top Matches</h3>
+                    </div>
+
+                    <div class="match-item">
+                        <div class="match-header">
+                            <div class="match-name">Commonwealth Scholarship</div>
+                            <div class="match-percentage">92%</div>
+                        </div>
+                        <div class="match-location">UK</div>
+                    </div>
+
+                    <div class="match-item">
+                        <div class="match-header">
+                            <div class="match-name">Mastercard Foundation</div>
+                            <div class="match-percentage">88%</div>
+                        </div>
+                        <div class="match-location">Various</div>
+                    </div>
+
+                    <div class="match-item">
+                        <div class="match-header">
+                            <div class="match-name">Erasmus Mundus</div>
+                            <div class="match-percentage">85%</div>
+                        </div>
+                        <div class="match-location">Europe</div>
+                    </div>
+
+                    <button class="view-all-matches-btn">View All Matches</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>
+                    <div class="logo-icon" style="width: 28px; height: 28px; font-size: 0.9rem;">AT</div>
+                    AceTrack
+                </h3>
+                <p>Empowering Cameroonian students to access world-class education through comprehensive scholarship opportunities worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="acetrack-scholarship-platform.html">Browse Scholarships</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Application Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AceTrack. All rights reserved. Made with ❤️ for Cameroonian students.</p>
+        </div>
+    </footer>
+<script src="/Dashboard.js"></script>
+   
+</body>
+</html>

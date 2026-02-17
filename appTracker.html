@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tracker</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceTrack - Application Tracker</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+ <link rel="stylesheet" href="/appTracker.css">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">
+            <div class="logo-icon"><i class="fa fa-book"></i></div>
+            <span>AceTrack</span>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="acetrack-scholarships.html">Scholarships</a></li>
+            <li><a href="/Dashboard.html">Dashboard</a></li>
+            <li><a href="/appTracker.html" class="active">My Applications</a></li>
+            <li><a href="#documents">Documents</a></li>
+        </ul>
+
+        <div class="nav-right">
+         <a href="/notifictions.html">    <div class="notification-badge">
+                <svg class="notification-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+                </svg>
+            </div></a>
+            <div class="user-avatar"><i class="fa fa-user"></i></div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Application Tracker</h1>
+            <p>Monitor and manage all your scholarship applications</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <div class="filter-tab active">
+                All <span class="count">4</span>
+            </div>
+            <div class="filter-tab">
+                In Progress <span class="count">2</span>
+            </div>
+            <div class="filter-tab">
+                Submitted <span class="count">1</span>
+            </div>
+            <div class="filter-tab">
+                Drafts <span class="count">1</span>
+            </div>
+        </div>
+
+        <!-- Applications Grid -->
+        <div class="applications-grid">
+            <!-- Chevening Scholarship Card -->
+            <div class="application-card">
+                <div class="card-header">
+                    <div class="card-title-section">
+                        <div class="card-icon-title">
+                            
+                            <i class="fa fa-graduation-cap" style="color: chocolate;"></i>
+                            <div>
+                                <h3>Chevening Scholarship</h3>
+                                <p class="card-organization">UK Government • United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-badge status-in-progress">In Progress</div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-label">Application Progress</span>
+                        <span class="progress-percentage">65%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <!-- Application Steps -->
+                <div class="application-steps">
+                    <div class="steps-header">Application Steps</div>
+                    
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Profile Created</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Documents Uploaded</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Essay Submitted</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Recommendation Letters</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Final Review</span>
+                    </div>
+                </div>
+
+                <!-- Deadline -->
+                <div class="deadline-section">
+                    <div class="deadline-header">
+                        <svg class="deadline-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                        </svg>
+                        <span class="deadline-label">Deadline</span>
+                    </div>
+                    <div class="deadline-date">March 15, 2026</div>
+                    <div class="deadline-remaining">42 days remaining</div>
+                </div>
+
+                <!-- Actions -->
+                <div class="card-actions">
+                    <button class="btn btn-primary">Continue Application</button>
+                    <button class="btn btn-secondary">View Scholarship</button>
+                </div>
+            </div>
+
+            <!-- Fulbright Program Card -->
+            <div class="application-card">
+                <div class="card-header">
+                    <div class="card-title-section">
+                        <div class="card-icon-title">
+                           
+                            <i class="fa fa-graduation-cap" style="color: chocolate;"></i>
+                            <div>
+                                <h3>Fulbright Program</h3>
+                                <p class="card-organization">US Department of State • United States</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-badge status-submitted">Submitted</div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-label">Application Progress</span>
+                        <span class="progress-percentage">100%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <!-- Application Steps -->
+                <div class="application-steps">
+                    <div class="steps-header">Application Steps</div>
+                    
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Profile Created</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Documents Uploaded</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Essay Submitted</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Recommendation Letters</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Final Review</span>
+                    </div>
+                </div>
+
+                <!-- Deadline -->
+                <div class="deadline-section">
+                    <div class="deadline-header">
+                      
+                        <i class="fa fa-graduation-cap" style="color: chocolate;"></i>
+                        <span class="deadline-label">Deadline</span>
+                    </div>
+                    <div class="deadline-date">April 1, 2026</div>
+                    <div class="deadline-remaining">59 days remaining</div>
+                </div>
+
+                <!-- Submission Status -->
+                <div class="submission-status">
+                    <div class="submission-status-header">
+                        <svg class="submission-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span class="submission-label">Submitted</span>
+                    </div>
+                    <div class="submission-date">Jan 15, 2026</div>
+                </div>
+
+                <!-- Actions -->
+                <div class="card-actions">
+                    <button class="btn btn-disabled">Application Submitted</button>
+                    <button class="btn btn-secondary">View Scholarship</button>
+                </div>
+            </div>
+
+            <!-- DAAD Scholarship Card -->
+            <div class="application-card">
+                <div class="card-header">
+                    <div class="card-title-section">
+                        <div class="card-icon-title">
+                            <i class="fa fa-graduation-cap" style="color: chocolate;"></i>
+                            <div>
+                                <h3>DAAD Scholarship</h3>
+                                <p class="card-organization">German Academic Exchange • Germany</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-badge status-in-progress">In Progress</div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-label">Application Progress</span>
+                        <span class="progress-percentage">43%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 43%"></div>
+                    </div>
+                </div>
+
+                <!-- Application Steps -->
+                <div class="application-steps">
+                    <div class="steps-header">Application Steps</div>
+                    
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Profile Created</span>
+                    </div>
+
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Documents Uploaded</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Essay Submitted</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Recommendation Letters</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Final Review</span>
+                    </div>
+                </div>
+
+                <!-- Deadline -->
+                <div class="deadline-section">
+                    <div class="deadline-header">
+                       <i class="fa fa-graduation-cap" style="color: chocolate;"></i>
+                        <span class="deadline-label">Deadline</span>
+                    </div>
+                    <div class="deadline-date">March 30, 2026</div>
+                    <div class="deadline-remaining">57 days remaining</div>
+                </div>
+
+                <!-- Actions -->
+                <div class="card-actions">
+                    <button class="btn btn-primary">Continue Application</button>
+                    <button class="btn btn-secondary">View Scholarship</button>
+                </div>
+            </div>
+
+            <!-- Commonwealth Scholarship Card -->
+            <div class="application-card">
+                <div class="card-header">
+                    <div class="card-title-section">
+                        <div class="card-icon-title">
+                         <i class="fa fa-graduation-cap" style="color: chocolate;"></i>
+                            <div>
+                                <h3>Commonwealth Scholarship</h3>
+                                <p class="card-organization">UK Commonwealth • United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-badge status-draft">Draft</div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-label">Application Progress</span>
+                        <span class="progress-percentage">20%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <!-- Application Steps -->
+                <div class="application-steps">
+                    <div class="steps-header">Application Steps</div>
+                    
+                    <div class="step-item completed">
+                        <div class="step-icon completed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <span class="step-label">Profile Created</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Documents Uploaded</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Essay Submitted</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Recommendation Letters</span>
+                    </div>
+
+                    <div class="step-item pending">
+                        <div class="step-icon pending">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <span class="step-label">Final Review</span>
+                    </div>
+                </div>
+
+                <!-- Deadline -->
+                <div class="deadline-section">
+                    <div class="deadline-header">
+                        <svg class="deadline-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                        </svg>
+                        <span class="deadline-label">Deadline</span>
+                    </div>
+                    <div class="deadline-date">April 15, 2026</div>
+                    <div class="deadline-remaining">73 days remaining</div>
+                </div>
+
+                <!-- Actions -->
+                <div class="card-actions">
+                    <button class="btn btn-primary">Continue Application</button>
+                    <button class="btn btn-secondary">View Scholarship</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="/appTracker.js"></script>
+</body>
+</html>
+</html>

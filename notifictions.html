@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceTrack - Notifications</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/notifiction.css">
+   
+</head>
+<body>
+    <!-- Navigation -->
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon"> <div class="logo-icon"><i class="fa fa-book"></i></div></div>
+                    <div class="logo-text-container">
+                        <span class="logo-text">AceTrack</span>
+                        <span class="logo-tagline">Your Path to Success</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Scholarships.html">Scholarships</a></li>
+                    <li><a href="/Dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="/appTracker.html">My Applications</a></li>
+                    <li><a href="#">Documents</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="auth-buttons">
+                    <a href="/login.html" class="login-btn">Login</a>
+                    <a href="/signup.html" class="signup-btn">Sign Up</a>
+                </div>
+                <a href="/notifictions.html"><div class="notification-icon">
+                    <span class="notification-badge">3</span>
+                    🔔
+                </div></a>
+                <div class="user-avatar"><i class="fa fa-user"></i></div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Notifications</h1>
+            <p class="hero-subtitle">Stay updated with your scholarship journey</p>
+        </div>
+    </section>
+
+    <!-- Notifications Content -->
+    <div class="notifications-container">
+        <div class="notifications-card">
+            <div class="notifications-header">
+                <div class="notifications-title">
+                    <h2>All Notifications</h2>
+                    <span class="new-badge" id="new-count">2 new</span>
+                </div>
+                <button class="mark-read-btn" onclick="markAllRead()">Mark all as read</button>
+            </div>
+            
+            <div class="notifications-list" id="notifications-list">
+                <!-- Notifications will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>
+                    <div class="logo-icon" style="width: 28px; height: 28px; font-size: 0.9rem;">AT</div>
+                    AceTrack
+                </h3>
+                <p>Empowering Cameroonian students to access world-class education through comprehensive scholarship opportunities worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/Scholarships.html">Browse Scholarships</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Application Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AceTrack. All rights reserved. Made with ❤️ for Cameroonian students.</p>
+        </div>
+    </footer>
+
+    <script src="/notifiction.js"></script>
+</body>
+</html>
+
+</html>
